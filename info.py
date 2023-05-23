@@ -14,7 +14,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = '10001717'
 API_HASH = 'c8cdc2079f7ab083e644381740260265'
-BOT_TOKEN = '5114144379:AAGa56ds2QZpU9QXi6ujrOirUe1O_f-qkfc'
+BOT_TOKEN = '5114144379:AAGa56ds2QZU9QXi6ujrOirUe1O_f-qkfc'
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -30,7 +30,7 @@ auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://CINEMAHUB:CINEMAHUB@cluster0.damjmfp.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv:w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "@lucascinemahubbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
@@ -50,11 +50,16 @@ IMDB = is_enabled((environ.get('IMDB', "False")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", """<b>📂Fɪʟᴇɴᴀᴍᴇ : {file_name}</b>
 
-╔════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═════╗
-
-♻️ 𝙂𝙍𝙊𝙐𝙋:-https://t.me/CINEMA_HUB_GROUP1        
-
-╚════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═════╝>""") 
+╔════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗
+▫️ ᴄʜᴀɴɴᴇʟ 
+t.me/+5os6sdIveVYwMjM1
+▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 1 
+t.me/+j4mDJ-QCZ9QzYWQ1
+▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 2 
+t.me/+ypPOj9vGLzAwM2E1
+▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 3 
+t.me/+xQ1uGy1q53NlMmQ9
+╚════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝""") 
 
 
 
