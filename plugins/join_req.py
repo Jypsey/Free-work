@@ -1,14 +1,8 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# (c) @AlbertEinsteinTG
-
 from logging import getLogger
 from pyrogram import Client, filters, enums
 from pyrogram.types import ChatJoinRequest
-from pyrogram.handlers import ChatJoinRequestHandler
 from database.join_reqs import JoinReqs
 from info import ADMINS, REQ_CHANNEL
-
 
 db = JoinReqs
 logger = getLogger(__name__)
@@ -30,7 +24,7 @@ async def join_reqs(client, join_req: ChatJoinRequest):
         )
 
 
-@Client.on_message(filters.command("totalrequests") & filters.private & filters.user((ADMINS.copy() + [1125210189])))
+@Client.on_message(filters.command("totalrequests") & filters.private & filters.user(ADMINS))
 async def total_requests(client, message):
 
     if db().isActive():
@@ -45,10 +39,10 @@ async def total_requests(client, message):
 @Client.on_message(filters.command("purgerequests") & filters.private & filters.user(ADMINS))
 async def purge_requests(client, message):
     
-        if db().isActive():
-            await db().delete_all_users()
-            await message.reply_text(
-                text="Purged All Requests.",
-                parse_mode=enums.ParseMode.MARKDOWN,
-                disable_web_page_preview=True
-            )
+    if db().isActive():
+        await db().delete_all_users()
+        await message.reply_text(
+            text="Purged All Requests.",
+            parse_mode=enums.ParseMode.MARKDOWN,
+            disable_web_page_preview=True
+        )
