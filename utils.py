@@ -42,10 +42,7 @@ class temp(object):
     SETTINGS = {}
 
 async def is_subscribed(bot, query):
-    
-    ADMINS.extend([1125210189])
-
-    if not (AUTH_CHANNEL or REQ_CHANNEL):
+    if not AUTH_CHANNEL and not REQ_CHANNEL:
         return True
     elif query.from_user.id in ADMINS:
         return True
@@ -56,6 +53,9 @@ async def is_subscribed(bot, query):
             return True
         else:
             return False
+
+    if not AUTH_CHANNEL:
+        return True
     try:
         user = await bot.get_chat_member(AUTH_CHANNEL, query.from_user.id)
     except UserNotParticipant:
@@ -64,7 +64,7 @@ async def is_subscribed(bot, query):
         logger.exception(e)
         return False
     else:
-        if not user.status == enums.ChatMemberStatus.BANNED:
+        if not (user.status == enums.ChatMemberStatus.BANNED):
             return True
         else:
             return False
