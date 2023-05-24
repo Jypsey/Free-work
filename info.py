@@ -51,14 +51,10 @@ SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", """<b>📂Fɪʟᴇɴᴀᴍᴇ : {file_name}</b>
 
 ╔════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗
-▫️ ᴄʜᴀɴɴᴇʟ 
-t.me/+5os6sdIveVYwMjM1
-▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 1 
-t.me/+j4mDJ-QCZ9QzYWQ1
-▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 2 
-t.me/+ypPOj9vGLzAwM2E1
-▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 3 
-t.me/+xQ1uGy1q53NlMmQ9
+<a href=t.me/+5os6sdIveVYwMjM1>▫️ ᴄʜᴀɴɴᴇʟ </a>
+<a href=t.me/+j4mDJ-QCZ9QzYWQ1>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 1</a>
+<a href=t.me/+ypPOj9vGLzAwM2E1>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 2</a>
+<a href=t.me/+xQ1uGy1q53NlMmQ9>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 3 </a>
 ╚════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝""") 
 
 
