@@ -64,8 +64,6 @@ async def start(client, message):
         if message.command[1] == "subscribe":
             await ForceSub(client, message)
             return
-
-    
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
