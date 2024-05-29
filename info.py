@@ -52,9 +52,9 @@ CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", """<b>📂Fɪʟᴇɴᴀ
 
 ╔════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗
 <a href=t.me/+5os6sdIveVYwMjM1>▫️ ᴄʜᴀɴɴᴇʟ </a>
-<a href=t.me/+j4mDJ-QCZ9QzYWQ1>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 1</a>
-<a href=t.me/+ypPOj9vGLzAwM2E1>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 2</a>
-<a href=t.me/+xQ1uGy1q53NlMmQ9>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 3 </a>
+<a href=t.me/film_cube_group_main>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 1</a>
+<a href=t.me/filmcube_group>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 2</a>
+<a href=t.me/filmcubee_group>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 3 </a>
 ╚════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝""") 
 
 
