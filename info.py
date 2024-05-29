@@ -51,7 +51,7 @@ SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", """<b>📂Fɪʟᴇɴᴀᴍᴇ : {file_name}</b>
 
 ╔════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗
-<a href=t.me/+5os6sdIveVYwMjM1>▫️ ᴄʜᴀɴɴᴇʟ </a>
+<a href=t.me/+b7rSipdVyeE0MWNl>▫️ ᴄʜᴀɴɴᴇʟ </a>
 <a href=t.me/film_cube_group_main>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 1</a>
 <a href=t.me/filmcube_group>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 2</a>
 <a href=t.me/filmcubee_group>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 3 </a>
