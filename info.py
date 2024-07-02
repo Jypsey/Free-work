@@ -1,5 +1,7 @@
 import re
 from os import environ
+from dotenv import load_dotenv
+load_dotenv("./dynamic.env", override=True)
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
@@ -35,12 +37,13 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # FSUB
-auth_channel = environ.get('AUTH_CHANNEL', '-1001843057370')
+auth_channel = environ.get('AUTH_CHANNEL')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 # Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID
-REQ_CHANNEL = environ.get("REQ_CHANNEL", '-1001843057370')
-REQ_CHANNEL = int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else False
+REQ_CHANNEL=environ.get("REQ_CHANNEL", None)
+REQ_CHANNEL = (int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else False) if REQ_CHANNEL is not None else None
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
+DELETE_TIMEOUT = int(environ.get('DELETE_TIMEOUT', 2*60*60)) # 2 hours in seconds
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1001869718840))
