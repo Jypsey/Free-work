@@ -42,7 +42,7 @@ class JoinReqs:
     async def get_all_users_count(self):
         return await self.col.count_documents({})
 
-async def add_fsub_chat(self, chat_id):
+    async def add_fsub_chat(self, chat_id):
         try:
             await self.chat_col.delete_many({})
             await self.chat_col.insert_one({"chat_id": chat_id})
