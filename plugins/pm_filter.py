@@ -82,6 +82,18 @@ async def next_page(bot, query):
             ]
             for file in files
         ]
+    btn.insert(0, 
+        [
+            InlineKeyboardButton(f' 🎬 {search} 🎬 ', 'qinfo')
+        ]
+    )
+    btn.insert(1, 
+         [
+             InlineKeyboardButton(f'📟 Files: {total}', 'minfo'),
+             InlineKeyboardButton(f'🎁 Tips', 'tinfo'),
+             InlineKeyboardButton(f'📮 Info', 'tinfo')
+         ]
+    )
 
     if 0 < offset <= 10:
         off_set = 0
@@ -402,6 +414,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "pages":
         await query.answer()
+    elif query.data == "tinfo":
+        await query.answer("⚠️Here You Can Request Movie's, Just Sent Movie OR WebSeries Name With Proper GOOGLE SPELLING..!!\n\n⚠️ Do Not Ask For Movies That Are Not Released On OTT platforms.\n\n⚠️Search The Movie Name On Google\n⚠️Then  Copy The Correct Spelling From There and Send It Here", show_alert=True)
+    elif query.data == "qinfo":
+        await query.answer("Hey 🥹\n\nClick On The Button Below The Files You Want And Start The Bot⏬\n\n( Send this when clicking on ishq place )", show_alert=True)
     elif query.data == "start":
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
@@ -660,7 +676,18 @@ async def auto_filter(client, msg, spoll=False):
             ]
             for file in files
         ]
-
+    btn.insert(0, 
+        [
+            InlineKeyboardButton(f' 🎬 {search} 🎬 ', 'qinfo')
+        ]
+    )
+    btn.insert(1, 
+         [
+             InlineKeyboardButton(f'📟 Files: {total_results}', 'minfo'),
+             InlineKeyboardButton(f'🎁 Tips', 'tinfo'),
+             InlineKeyboardButton(f'📮 Info', 'tinfo')
+         ]
+    )
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
