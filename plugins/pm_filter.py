@@ -414,7 +414,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "pages":
         await query.answer({total})
     elif query.data == "tinfo":
-        await query.answer("⚠️Here You Can Request Movie's, Just Sent Movie OR WebSeries Name With Proper GOOGLE SPELLING..!!\n\n⚠️ Do Not Ask For Movies That Are Not Released On OTT platforms.\n\n⚠️Search The Movie Name On Google\n⚠️Then  Copy The Correct Spelling From There and Send It Here", show_alert=True)
+        await query.answer(script.TIPS_TXT, show_alert=True)
     elif query.data == "qinfo":
         await query.answer("Hey 🥹\n\nClick On The Button Below The Files You Want And Start The Bot⏬", show_alert=True)
     elif query.data == "start":
