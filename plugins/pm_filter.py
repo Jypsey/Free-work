@@ -90,8 +90,7 @@ async def next_page(bot, query):
     btn.insert(1, 
          [
              InlineKeyboardButton(f'📟 Files: {total}', 'minfo'),
-             InlineKeyboardButton(f'🎁 Tips', 'tinfo'),
-             InlineKeyboardButton(f'📮 Info', 'tinfo')
+             InlineKeyboardButton(f'🎁 Tips', 'tinfo')
          ]
     )
 
@@ -417,7 +416,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "tinfo":
         await query.answer("⚠️Here You Can Request Movie's, Just Sent Movie OR WebSeries Name With Proper GOOGLE SPELLING..!!\n\n⚠️ Do Not Ask For Movies That Are Not Released On OTT platforms.\n\n⚠️Search The Movie Name On Google\n⚠️Then  Copy The Correct Spelling From There and Send It Here", show_alert=True)
     elif query.data == "qinfo":
-        await query.answer("Hey 🥹\n\nClick On The Button Below The Files You Want And Start The Bot⏬\n\n( Send this when clicking on ishq place )", show_alert=True)
+        await query.answer("Hey 🥹\n\nClick On The Button Below The Files You Want And Start The Bot⏬", show_alert=True)
     elif query.data == "start":
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
@@ -685,7 +684,7 @@ async def auto_filter(client, msg, spoll=False):
          [
              InlineKeyboardButton(f'📟 Files: {total_results}', 'minfo'),
              InlineKeyboardButton(f'🎁 Tips', 'tinfo'),
-             InlineKeyboardButton(f'📮 Info', 'tinfo')
+             
          ]
     )
     if offset != "":
@@ -735,7 +734,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query {search}"
+        cap = f"<b>Hᴇʏ 👋🏻</b> {message.from_user.mention} 🥹\n\n <b><i>🔖 𝙏𝙞𝙩𝙡𝙚 : {search}\n📂 𝙏𝙖𝙥 𝙤𝙣 𝙩𝙝𝙚 𝙛𝙞𝙡𝙚 𝙗𝙪𝙩𝙩𝙤𝙣 𝙖𝙣𝙙 𝙩𝙝𝙚𝙣 𝙨𝙩𝙖𝙧𝙩 𝙩𝙤 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙.</i></b>\n\n <b> 🎯𝙏𝙝𝙖𝙣𝙠𝙨 𝙁𝙤𝙧 𝙍𝙚𝙦𝙪𝙚𝙨𝙩</b>"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
