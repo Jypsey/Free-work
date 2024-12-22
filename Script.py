@@ -105,3 +105,10 @@ Added By - {}
 ID - <code>{}</code>
 Name - {}
 """
+    TIPS_TXT = """⚠️Here You Can Request Movie's, Just Sent Movie OR WebSeries Name With Proper GOOGLE SPELLING..!!
+    
+⚠️ Do Not Ask For Movies That Are Not Released On OTT platforms.
+
+⚠️Search The Movie Name On Google
+
+⚠️Then  Copy The Correct Spelling From There and Send It Here"""
